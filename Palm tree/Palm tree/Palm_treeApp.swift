@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Palm_treeApp: App {
+    
+    @StateObject var viewModel = TreeViewModel(parentName: Constants.UI.rootDirectory)
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                TreeView(viewModel: viewModel)
+            }
         }
     }
 }

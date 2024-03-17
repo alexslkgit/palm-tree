@@ -8,12 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		678B9A2F2BA1CD5400BC9922 /* Palm_treeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A2E2BA1CD5400BC9922 /* Palm_treeApp.swift */; };
-		678B9A312BA1CD5400BC9922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A302BA1CD5400BC9922 /* ContentView.swift */; };
+		678B9A312BA1CD5400BC9922 /* TreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A302BA1CD5400BC9922 /* TreeView.swift */; };
 		678B9A332BA1CD5500BC9922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678B9A322BA1CD5500BC9922 /* Assets.xcassets */; };
 		678B9A362BA1CD5500BC9922 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 678B9A352BA1CD5500BC9922 /* Preview Assets.xcassets */; };
 		678B9A402BA1CD5500BC9922 /* Palm_treeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A3F2BA1CD5500BC9922 /* Palm_treeTests.swift */; };
 		678B9A4A2BA1CD5500BC9922 /* Palm_treeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A492BA1CD5500BC9922 /* Palm_treeUITests.swift */; };
 		678B9A4C2BA1CD5500BC9922 /* Palm_treeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A4B2BA1CD5500BC9922 /* Palm_treeUITestsLaunchTests.swift */; };
+		678B9A5E2BA7579E00BC9922 /* TreeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A5D2BA7579E00BC9922 /* TreeItem.swift */; };
+		678B9A602BA757B400BC9922 /* ItemDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A5F2BA757B400BC9922 /* ItemDetails.swift */; };
+		678B9A632BA7581400BC9922 /* ItemDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A622BA7581400BC9922 /* ItemDetailsView.swift */; };
+		678B9A662BA7584500BC9922 /* TreeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A652BA7584500BC9922 /* TreeViewModel.swift */; };
+		678B9A692BA7587900BC9922 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A682BA7587900BC9922 /* NetworkService.swift */; };
+		678B9A6B2BA7588F00BC9922 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A6A2BA7588F00BC9922 /* NetworkError.swift */; };
+		678B9A6D2BA7589F00BC9922 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A6C2BA7589F00BC9922 /* DataParser.swift */; };
+		678B9A6F2BA758BF00BC9922 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A6E2BA758BF00BC9922 /* NetworkSession.swift */; };
+		678B9A722BA7590600BC9922 /* TreeDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A712BA7590600BC9922 /* TreeDataRequest.swift */; };
+		678B9A742BA7592100BC9922 /* ItemDetailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A732BA7592100BC9922 /* ItemDetailsRequest.swift */; };
+		678B9A762BA75C5800BC9922 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A752BA75C5800BC9922 /* NetworkRequest.swift */; };
+		678B9A792BA75C8400BC9922 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A782BA75C8400BC9922 /* Constants.swift */; };
+		678B9A7B2BA75D9100BC9922 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A7A2BA75D9100BC9922 /* ItemDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +49,7 @@
 /* Begin PBXFileReference section */
 		678B9A2B2BA1CD5400BC9922 /* Palm tree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Palm tree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		678B9A2E2BA1CD5400BC9922 /* Palm_treeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_treeApp.swift; sourceTree = "<group>"; };
-		678B9A302BA1CD5400BC9922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		678B9A302BA1CD5400BC9922 /* TreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeView.swift; sourceTree = "<group>"; };
 		678B9A322BA1CD5500BC9922 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		678B9A352BA1CD5500BC9922 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		678B9A3B2BA1CD5500BC9922 /* Palm treeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm treeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,19 @@
 		678B9A452BA1CD5500BC9922 /* Palm treeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Palm treeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		678B9A492BA1CD5500BC9922 /* Palm_treeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_treeUITests.swift; sourceTree = "<group>"; };
 		678B9A4B2BA1CD5500BC9922 /* Palm_treeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palm_treeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		678B9A5D2BA7579E00BC9922 /* TreeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeItem.swift; sourceTree = "<group>"; };
+		678B9A5F2BA757B400BC9922 /* ItemDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetails.swift; sourceTree = "<group>"; };
+		678B9A622BA7581400BC9922 /* ItemDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsView.swift; sourceTree = "<group>"; };
+		678B9A652BA7584500BC9922 /* TreeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeViewModel.swift; sourceTree = "<group>"; };
+		678B9A682BA7587900BC9922 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		678B9A6A2BA7588F00BC9922 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		678B9A6C2BA7589F00BC9922 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		678B9A6E2BA758BF00BC9922 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		678B9A712BA7590600BC9922 /* TreeDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeDataRequest.swift; sourceTree = "<group>"; };
+		678B9A732BA7592100BC9922 /* ItemDetailsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsRequest.swift; sourceTree = "<group>"; };
+		678B9A752BA75C5800BC9922 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		678B9A782BA75C8400BC9922 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		678B9A7A2BA75D9100BC9922 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +120,12 @@
 		678B9A2D2BA1CD5400BC9922 /* Palm tree */ = {
 			isa = PBXGroup;
 			children = (
+				678B9A772BA75C7400BC9922 /* Support */,
+				678B9A612BA757C700BC9922 /* Views */,
+				678B9A642BA7582500BC9922 /* ViewModels */,
+				678B9A5C2BA7493500BC9922 /* Models */,
+				678B9A672BA7586100BC9922 /* Services */,
 				678B9A2E2BA1CD5400BC9922 /* Palm_treeApp.swift */,
-				678B9A302BA1CD5400BC9922 /* ContentView.swift */,
-				678B9A322BA1CD5500BC9922 /* Assets.xcassets */,
 				678B9A342BA1CD5500BC9922 /* Preview Content */,
 			);
 			path = "Palm tree";
@@ -125,6 +154,64 @@
 				678B9A4B2BA1CD5500BC9922 /* Palm_treeUITestsLaunchTests.swift */,
 			);
 			path = "Palm treeUITests";
+			sourceTree = "<group>";
+		};
+		678B9A5C2BA7493500BC9922 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A5D2BA7579E00BC9922 /* TreeItem.swift */,
+				678B9A5F2BA757B400BC9922 /* ItemDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		678B9A612BA757C700BC9922 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A302BA1CD5400BC9922 /* TreeView.swift */,
+				678B9A622BA7581400BC9922 /* ItemDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		678B9A642BA7582500BC9922 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A652BA7584500BC9922 /* TreeViewModel.swift */,
+				678B9A7A2BA75D9100BC9922 /* ItemDetailsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		678B9A672BA7586100BC9922 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A702BA758FF00BC9922 /* Requests */,
+				678B9A682BA7587900BC9922 /* NetworkService.swift */,
+				678B9A6A2BA7588F00BC9922 /* NetworkError.swift */,
+				678B9A6C2BA7589F00BC9922 /* DataParser.swift */,
+				678B9A6E2BA758BF00BC9922 /* NetworkSession.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		678B9A702BA758FF00BC9922 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A712BA7590600BC9922 /* TreeDataRequest.swift */,
+				678B9A732BA7592100BC9922 /* ItemDetailsRequest.swift */,
+				678B9A752BA75C5800BC9922 /* NetworkRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		678B9A772BA75C7400BC9922 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				678B9A322BA1CD5500BC9922 /* Assets.xcassets */,
+				678B9A782BA75C8400BC9922 /* Constants.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +344,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				678B9A312BA1CD5400BC9922 /* ContentView.swift in Sources */,
+				678B9A762BA75C5800BC9922 /* NetworkRequest.swift in Sources */,
+				678B9A6F2BA758BF00BC9922 /* NetworkSession.swift in Sources */,
+				678B9A7B2BA75D9100BC9922 /* ItemDetailsViewModel.swift in Sources */,
+				678B9A312BA1CD5400BC9922 /* TreeView.swift in Sources */,
+				678B9A6B2BA7588F00BC9922 /* NetworkError.swift in Sources */,
+				678B9A602BA757B400BC9922 /* ItemDetails.swift in Sources */,
+				678B9A5E2BA7579E00BC9922 /* TreeItem.swift in Sources */,
+				678B9A632BA7581400BC9922 /* ItemDetailsView.swift in Sources */,
+				678B9A662BA7584500BC9922 /* TreeViewModel.swift in Sources */,
 				678B9A2F2BA1CD5400BC9922 /* Palm_treeApp.swift in Sources */,
+				678B9A692BA7587900BC9922 /* NetworkService.swift in Sources */,
+				678B9A742BA7592100BC9922 /* ItemDetailsRequest.swift in Sources */,
+				678B9A792BA75C8400BC9922 /* Constants.swift in Sources */,
+				678B9A722BA7590600BC9922 /* TreeDataRequest.swift in Sources */,
+				678B9A6D2BA7589F00BC9922 /* DataParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
