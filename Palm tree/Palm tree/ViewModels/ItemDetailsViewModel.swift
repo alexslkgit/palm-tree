@@ -6,11 +6,12 @@
 //
 
 import Combine
-import Foundation
 
 @MainActor
 class ItemDetailsViewModel: ObservableObject {
+    
     @Published var itemDetails: ItemDetails?
+    @Published var error: Error?
     @Published var isLoading = false
     
     let itemId: String
@@ -25,12 +26,16 @@ class ItemDetailsViewModel: ObservableObject {
         Task {
             do {
                 let details: ItemDetails = try await networkService.fetch(request: ItemDetailsRequest(id: itemId))
-                self.itemDetails = details
+                Task { @MainActor in
+                    self.itemDetails = details
+                    self.isLoading = false
+                }
             } catch {
-                print(error)
-                // Error handling
+                Task { @MainActor in 
+                    self.error = error
+                    self.isLoading = false
+                }
             }
-            isLoading = false
         }
     }
 }

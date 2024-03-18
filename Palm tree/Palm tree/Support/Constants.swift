@@ -29,6 +29,8 @@ struct Constants {
         static let lastModifiedAtLabel = "Last Modified At: "
         static let lastModifiedByLabel = "Last Modified By: "
         static let descriptionLabel = "Description: "
+        static let error = "Error: "
+        static let ok = "OK"
     }
     
 }

@@ -12,6 +12,8 @@ import Combine
 class TreeViewModel: ObservableObject {
     
     @Published var items: [TreeItem] = []
+    @Published var error: Error?
+
     var parentName: String?
 
     private let networkService: NetworkService
@@ -34,9 +36,13 @@ class TreeViewModel: ObservableObject {
             do {
                 let request: NetworkRequest = TreeDataRequest()
                 let fetchedItems: [TreeItem] = try await networkService.fetch(request: request)
-                self.items = fetchedItems
+                Task { @MainActor in
+                    self.items = fetchedItems
+                }
             } catch {
-                print(error)
+                Task { @MainActor in
+                    self.error = error
+                }
             }
         }
     }

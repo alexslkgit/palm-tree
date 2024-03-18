@@ -33,6 +33,13 @@ struct TreeView: View {
         .navigationTitle(viewModel.parentName ?? Constants.UI.rootDirectory)
         .toolbar {
             EditButton()
+        }.alert(Constants.UI.error, isPresented: Binding<Bool>(
+            get: { self.viewModel.error != nil },
+            set: { _ in self.viewModel.error = nil }
+        ), presenting: self.viewModel.error) { error in
+            Button(Constants.UI.ok) {}
+        } message: { error in
+            Text(error.localizedDescription)
         }
     }
     
