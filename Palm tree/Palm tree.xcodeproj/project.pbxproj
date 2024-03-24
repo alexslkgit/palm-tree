@@ -27,6 +27,8 @@
 		678B9A762BA75C5800BC9922 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A752BA75C5800BC9922 /* NetworkRequest.swift */; };
 		678B9A792BA75C8400BC9922 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A782BA75C8400BC9922 /* Constants.swift */; };
 		678B9A7B2BA75D9100BC9922 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A7A2BA75D9100BC9922 /* ItemDetailsViewModel.swift */; };
+		678B9A7F2BA8A40000BC9922 /* CustomColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678B9A7E2BA8A40000BC9922 /* CustomColorPicker.swift */; };
+		67CFBDDF2BB065390008B8A4 /* SelectedColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CFBDDE2BB065390008B8A4 /* SelectedColorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		678B9A752BA75C5800BC9922 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		678B9A782BA75C8400BC9922 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		678B9A7A2BA75D9100BC9922 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
+		678B9A7E2BA8A40000BC9922 /* CustomColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorPicker.swift; sourceTree = "<group>"; };
+		67CFBDDE2BB065390008B8A4 /* SelectedColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedColorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +129,6 @@
 				678B9A642BA7582500BC9922 /* ViewModels */,
 				678B9A5C2BA7493500BC9922 /* Models */,
 				678B9A672BA7586100BC9922 /* Services */,
-				678B9A2E2BA1CD5400BC9922 /* Palm_treeApp.swift */,
 				678B9A342BA1CD5500BC9922 /* Preview Content */,
 			);
 			path = "Palm tree";
@@ -161,6 +164,7 @@
 			children = (
 				678B9A5D2BA7579E00BC9922 /* TreeItem.swift */,
 				678B9A5F2BA757B400BC9922 /* ItemDetails.swift */,
+				67CFBDDE2BB065390008B8A4 /* SelectedColorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,8 +172,10 @@
 		678B9A612BA757C700BC9922 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				678B9A2E2BA1CD5400BC9922 /* Palm_treeApp.swift */,
 				678B9A302BA1CD5400BC9922 /* TreeView.swift */,
 				678B9A622BA7581400BC9922 /* ItemDetailsView.swift */,
+				678B9A7E2BA8A40000BC9922 /* CustomColorPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CFBDDF2BB065390008B8A4 /* SelectedColorModel.swift in Sources */,
 				678B9A762BA75C5800BC9922 /* NetworkRequest.swift in Sources */,
 				678B9A6F2BA758BF00BC9922 /* NetworkSession.swift in Sources */,
 				678B9A7B2BA75D9100BC9922 /* ItemDetailsViewModel.swift in Sources */,
@@ -354,6 +361,7 @@
 				678B9A632BA7581400BC9922 /* ItemDetailsView.swift in Sources */,
 				678B9A662BA7584500BC9922 /* TreeViewModel.swift in Sources */,
 				678B9A2F2BA1CD5400BC9922 /* Palm_treeApp.swift in Sources */,
+				678B9A7F2BA8A40000BC9922 /* CustomColorPicker.swift in Sources */,
 				678B9A692BA7587900BC9922 /* NetworkService.swift in Sources */,
 				678B9A742BA7592100BC9922 /* ItemDetailsRequest.swift in Sources */,
 				678B9A792BA75C8400BC9922 /* Constants.swift in Sources */,
@@ -530,6 +538,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,6 +568,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

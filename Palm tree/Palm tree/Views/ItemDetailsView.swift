@@ -10,7 +10,8 @@ import SwiftUI
 struct ItemDetailsView: View {
     
     @StateObject private var viewModel: ItemDetailsViewModel
-    
+    @EnvironmentObject var selectedColorModel: SelectedColorModel
+
     init(itemId: String) {
         _viewModel = StateObject(wrappedValue: ItemDetailsViewModel(itemId: itemId))
     }
@@ -30,6 +31,8 @@ struct ItemDetailsView: View {
                 ProgressView(Constants.UI.loading)
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(selectedColorModel.color.opacity(0.2))
         .navigationTitle(Constants.UI.itemDetailsTitle)
         .onAppear {
             viewModel.loadItemDetails()
