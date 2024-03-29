@@ -14,18 +14,18 @@ struct TreeView: View {
 
     var body: some View {
         List {
-            ForEach(viewModel.items, id: \.uniqueID) { item in
+            ForEach(viewModel.items, id: \.id) { item in
                 if let children = item.children, !children.isEmpty {
-                    let childViewModel = TreeViewModel(items: children, parentName: item.label)
-                    NavigationLink(destination: TreeView(viewModel: childViewModel) .environmentObject(selectedColorModel)) {
-                        Text(item.label ?? Constants.UI.noName)
-                    }
-                } else if let id = item.id {
-                    NavigationLink(destination: ItemDetailsView(itemId: id).environmentObject(selectedColorModel)) {
+                    let childViewModel = TreeViewModel(networkService: viewModel.networkService, 
+                                                       items: children, parentName: item.label)
+                    NavigationLink(destination: TreeView(viewModel: childViewModel)
+                        .environmentObject(selectedColorModel)) {
                         Text(item.label ?? Constants.UI.noName)
                     }
                 } else {
-                    Text(item.label ?? Constants.UI.noName)
+                    NavigationLink(destination: ItemDetailsView(itemId: item.id).environmentObject(selectedColorModel)) {
+                        Text(item.label ?? Constants.UI.noName)
+                    }
                 }
             }
             .onMove(perform: move)
@@ -50,5 +50,6 @@ struct TreeView: View {
 }
 
 #Preview {
-    TreeView(viewModel: TreeViewModel(parentName: Constants.UI.rootDirectory))
+    TreeView(viewModel: TreeViewModel(networkService: NetworkService(),
+                                      parentName: Constants.UI.rootDirectory))
 }

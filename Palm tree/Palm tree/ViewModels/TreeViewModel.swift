@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Combine
 
 @MainActor
 class TreeViewModel: ObservableObject {
@@ -16,9 +15,9 @@ class TreeViewModel: ObservableObject {
 
     var parentName: String?
 
-    private let networkService: NetworkService
+    let networkService: NetworkService
     
-    init(networkService: NetworkService = NetworkService(),
+    init(networkService: NetworkService,
          items: [TreeItem] = [],
          parentName: String?) {
         
@@ -34,15 +33,10 @@ class TreeViewModel: ObservableObject {
     private func loadTreeDataRequest() {
         Task {
             do {
-                let request: NetworkRequest = TreeDataRequest()
-                let fetchedItems: [TreeItem] = try await networkService.fetch(request: request)
-                Task { @MainActor in
-                    self.items = fetchedItems
-                }
+                let fetchedItems: [TreeItem] = try await networkService.fetch(request: TreeDataRequest())
+                self.items = fetchedItems
             } catch {
-                Task { @MainActor in
-                    self.error = error
-                }
+                self.error = error
             }
         }
     }

@@ -5,16 +5,13 @@
 //  Created by Slobodianiuk Oleksandr on 18.03.2024.
 //
 
-import Foundation
 import SwiftUI
 
 struct CustomColorPicker: View {
     
     @Binding var selectedColor: Color
     
-    private let colors: [Color] = [.red, .orange, .yellow,
-                                   .green, .blue, .purple,
-                                   .brown, .black]
+    private let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple, .brown, .black]
     
     var body: some View {
         ScrollView(.horizontal) {

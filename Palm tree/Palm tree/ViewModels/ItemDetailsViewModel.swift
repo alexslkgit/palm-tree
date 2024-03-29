@@ -5,7 +5,7 @@
 //  Created by Slobodianiuk Oleksandr on 17.03.2024.
 //
 
-import Combine
+import Foundation
 
 @MainActor
 class ItemDetailsViewModel: ObservableObject {
@@ -26,15 +26,11 @@ class ItemDetailsViewModel: ObservableObject {
         Task {
             do {
                 let details: ItemDetails = try await networkService.fetch(request: ItemDetailsRequest(id: itemId))
-                Task { @MainActor in
-                    self.itemDetails = details
-                    self.isLoading = false
-                }
+                self.itemDetails = details
+                self.isLoading = false
             } catch {
-                Task { @MainActor in 
-                    self.error = error
-                    self.isLoading = false
-                }
+                self.error = error
+                self.isLoading = false
             }
         }
     }

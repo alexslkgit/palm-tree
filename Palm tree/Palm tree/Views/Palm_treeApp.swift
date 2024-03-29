@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct Palm_treeApp: App {
     
-    @StateObject var treeViewModel = TreeViewModel(parentName: Constants.UI.rootDirectory)
+    @StateObject var treeViewModel = TreeViewModel(networkService: NetworkService(),
+                                                   parentName: Constants.UI.rootDirectory)
     @StateObject private var selectedColorModel = SelectedColorModel()
 
     var body: some Scene {
@@ -20,7 +21,6 @@ struct Palm_treeApp: App {
                     TreeView(viewModel: treeViewModel)
                         .environmentObject(selectedColorModel)
                 }
-                .navigationViewStyle(.stack)
                 .background(selectedColorModel.color.opacity(0.2))
                 VStack {
                     Spacer()
